@@ -1,0 +1,111 @@
+%%%%%%%
+%%% IEEE Access, compiled by Ivan Podkurkov in August 2018
+%%%%%%%
+\documentclass[journal,onecolumn]{IEEEtran}
+%\documentclass[journal,10pt,draftcls,twoside,onecolumn]{IEEEtran}
+
+% =========================== PACKAGES ======================================================
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage{amsmath, amsfonts, amsthm, bm}
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf}
+\usepackage{color}
+\usepackage{gensymb}
+\usepackage{mathtools}
+\usepackage{textpos}
+\usepackage[latin1]{inputenc}
+\usepackage{psfrag}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{enumerate}
+\usepackage{cases}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{lipsum,graphicx,multicol}
+\usepackage{soul}
+\usepackage{cite}
+\usepackage{multicol}
+\usepackage{booktabs}
+
+% =========================== MACRO DEFS ====================================================
+% Put user-defined macros into an extra .tex-document: helps to keep the main file more clean.
+\input{macros}
+
+% example how to check for the draft version: this one defines a value to use for the width of figures, depending on the versions. Would be used together
+% with \includegraphics[width=\figwidth]{...} later on
+\ifCLASSOPTIONdraftcls
+	\newcommand{\figwidthSim}{88mm}
+	\newcommand{\figwidthMain}{88mm}
+	\newcommand{\figwidthConcept}{88mm}
+	\newcommand{\figwidthSM}{88mm}
+\else
+	\newcommand{\figwidthSim}{88mm}
+	\newcommand{\figwidthMain}{88mm}
+	\newcommand{\figwidthConcept}{77mm}
+	\newcommand{\figwidthSM}{170mm}
+\fi
+
+%% define color for revisions or remarks
+%\newcommand{\revA}[1]{{\color[rgb]{0.5,0.5,0}#1}}
+%\newcommand{\revB}[1]{{\color[rgb]{0.5,0.5,0}#1}}
+%\newcommand{\revC}[1]{{\color[rgb]{0.5,0.5,0}#1}}
+%\newcommand{\revD}[1]{{\color[rgb]{0.7,0,0.7}#1}}
+%\newcommand{\revE}[1]{{\color[rgb]{0,0.3,0.7}#1}}
+%\newcommand{\revF}[1]{{\color[rgb]{0,0.7,0.7}#1}}
+%\newcommand{\revG}[1]{{\color[rgb]{1,0,0}#1}}
+
+% (disabled for final version)
+\newcommand{\revA}[1]{#1}
+\newcommand{\revB}[1]{#1}
+\newcommand{\revC}[1]{#1}
+\newcommand{\revD}[1]{#1}
+\newcommand{\revE}[1]{#1}
+\newcommand{\revF}[1]{#1}
+\newcommand{\revG}[1]{#1}
+% ===========================================================================================
+
+\title{ Document title}
+\author{Author Authors,~\IEEEmembership{Student/Member/Fellow,~IEEE}
+	%\ifCLASSOPTIONdraftcls
+	%\footnote{Copyright (c) 2015 IEEE. Personal use of this material is permitted. However, permission to use this material for any other purposes must be obtained from the IEEE by sending a request to pubs-permissions@ieee.org.}
+	%\fi
+	\thanks{Some footnote comments go here ...}%
+	\thanks{Another footnote comments go here ...}%
+	\thanks{e.g., Author Authors is/are with the
+			Department,
+			University,
+			City, Country (e-mail: \{email\}@mail.com,
+			WWW: http://www.website\_address).}%
+}
+
+% correct bad hyphenation here
+%\hyphenation{op-tical net-works semi-conduc-tor}
+%%%%%%%
+%%% Main document body starts here
+%%%%%%%
+\begin{document}
+
+\maketitle
+
+\begin{IEEEkeywords}
+keywords
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+
+bla bla \cite{DeBoor2001ParctGuideToSplines}
+%%%%%%% 
+%%% Chapter n: ...
+%%%%%%%
+
+%%%%%%%%
+%%% Bibliography, includes a refs.bib BibTeX file
+%%%%%%%%
+\vspace{-5mm}
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,refs}
+
+\end{document}

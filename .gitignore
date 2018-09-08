@@ -1,0 +1,26 @@
+# OS generated files #
+######################
+*.DS_Store
+#._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# MATLAB temp files #
+*.m~
+
+# LaTeX related files -- only keep .pdf, .tex, .bib, and .ltx #
+######################
+*.aux
+*.bbl
+*.blg
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.upa
+*eps-converted-to.pdf
+

@@ -1,0 +1,117 @@
+\usepackage{bm}
+
+%=== To define custom Lemmas, Definitions, Theorems, also ================
+%=== provides proofs with end of proof sign (\begin{proof}\end{proof}) ===
+\usepackage{amsthm}
+\newtheorem{def2}{Definition}
+\newtheorem{conjec}{Conjecture}
+\newtheorem{lemma}{Lemma}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{case}{Case}
+\newtheorem{exmp}{Example}
+
+%=== This is for tables===========================================
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\midsepremove}{\aboverulesep = 0mm \belowrulesep = 0mm}
+\midsepremove
+\newcommand{\midsepdefault}{\aboverulesep = 0.605mm \belowrulesep = 0.984mm}
+\midsepdefault
+\newcommand\solidrule[1][1cm]{\rule[0.5ex]{#1}{.4pt}}
+\newcommand\dashedrule[1][1cm]{\mbox{\solidrule[#1]\hspace{#1}\solidrule[#1]\hspace{#1}\solidrule[#1]}}
+
+%=== symbols =====================================================
+%\newcommand{\ma}[1]{\bm{ #1 }}         % matrix/vector
+\newcommand{\ten}[1]{\bm{\mathcal #1}} % tensor
+\newcommand{\set}[1]{{\mathcal #1}}    % set
+\newcommand{\compl}{\mathbb{C}}        % complex-valued numbers
+\newcommand{\real}{\mathbb{R}}         % real-valued numbers
+\newcommand{\eqdef}{\stackrel{.}{=}} % definition
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+%=== functional operators ======================================
+\newcommand{\realof}[1]{{\rm Re}\left\{ #1 \right\}}           % real part
+\newcommand{\imagof}[1]{{\rm Im}\left\{ #1 \right\}}           % imaginary part
+\newcommand{\vecof}[1]{{\rm vec}\left\{ #1 \right\}}           % vec operator
+\newcommand{\rect}{\rm rect}           % rect function
+\newcommand{\unvecof}[2]{\mathop{\rm unvec}_{#2}\left\{ #1 \right\}}% unvec operator
+\newcommand{\diagof}[1]{{\rm diag}\left\{ #1 \right\}}         % diag operator
+\newcommand{\traceof}[1]{{\rm tr}\left\{ #1 \right\}}          % trace operator
+\newcommand{\twonorm}[1]{\left\|#1\right\|_2}                  % two-norm
+\newcommand{\fronorm}[1]{\left\|#1\right\|_{\rm F}}            % Frobenius norm
+\newcommand{\honorm}[1]{\left\|#1\right\|_{\rm H}}             % higher-order norm
+\newcommand{\expvof}[1]{\mathbb{E}\left\{ #1 \right\}}         % expected value
+\newcommand{\expof}[1]{{\rm e}^{#1}}                           % e^{}
+
+%=== other operators ===========================================
+\newcommand{\argmax}{\mathop{{\arg \max}}}         % argmax
+
+%=== binary operators ===========================================
+\newcommand{\krp}{\diamond}  % Khatri-Rao product: A \krp B
+\newcommand{\kron}{\otimes}  % Kronecker product: A \kron B
+
+%=== superscripts ================================================
+\newcommand{\degrees}{\circ}   % e.g., 90^\degrees
+\newcommand{\trans}{{\rm T}}   % transpose: ^\trans
+\newcommand{\herm}{{\rm H}}    % hermitian: ^\herm
+\newcommand{\mtrans}{-{\rm T}} % inv.transpose: ^\mtrans
+\newcommand{\mherm}{-{\rm H}}  % inv.hermitian: ^\mherm
+\newcommand{\pinv}{+}          % pseudo-inverse: ^\pinv
+\newcommand{\conj}{*}          % complex conjugate: ^\conj
+
+%=== Tensor stuff ================================================
+\newcommand{\tconcat}{\mbox{\Huge \textvisiblespace \hspace{-0.2ex}} \;}
+\newcommand{\unf}[2]{\left[ \ten{#1} \right]_{(#2)}}
+\newcommand{\unfnot}[2]{\left[ #1 \right]_{(#2)}}
+
+%=== short-hand for colors =======================================
+\usepackage{color}
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+%=== short hand for TWR quantities ===============================
+\newcommand{\UT}[1]{\textsf{UT$_#1$}}
+%\newcommand{\UTM}[2]{\textsf{UT$_#1^{(#2)}$}}
+\newcommand{\UTM}[1]{\textsf{UT$_#1$}}
+\newcommand{\RS}{{\textsf{RS}}}
+\newcommand{\RSf}{\textsf{R}}
+\newcommand{\RSM}[1]{\textsf{R$_#1$}}
+\newcommand{\MR}{M_{\rm R}}
+\newcommand{\NR}{N_{\rm R}}
+\newcommand{\NP}{N_{\rm P}}
+\newcommand{\NPi}[1]{N_{\rm P,#1}}
+\newcommand{\PT}[1]{P_{{\rm T},#1}}
+\newcommand{\PN}[1]{P_{{\rm N},#1}}
+\newcommand{\PTR}{P_{{\rm T,R}}}
+\newcommand{\PNR}{P_{{\rm N,R}}}
+\newcommand{\PTx}{P_{{\rm T}}}
+\newcommand{\PNx}{P_{{\rm N}}}
+\newcommand{\eff}{{\rm (e)}}
+\newcommand{\effT}{{\rm (e)^\trans}}
+\newcommand{\effS}{{\rm (e)^2}}
+\newcommand{\eq}{{\rm (eq)}}
+\newcommand{\target}{{\rm (T)}}
+\newcommand{\forw}{{\rm (f)}}
+\newcommand{\forwT}{{\rm (f)^\trans}}
+\newcommand{\forwH}{{\rm (f)^\herm}}
+\newcommand{\backw}{{\rm (b)}}
+\newcommand{\backwT}{{\rm (b)^\trans}}
+\newcommand{\backwH}{{\rm (b)^\herm}}
+\newcommand{\forwn}{{\rm (f,0)}}
+\newcommand{\backwn}{{\rm (b,0)}}
+
+%=== pseudo code =================================================
+\newcommand{\algorithmicinitiate}{\textbf{Initiate:}}
+
+%=== other stuff =================================================
+\newcommand{\te}[1]{\mathrm{#1}} % usual text in formulas
+\newcommand{\note}[1]{\red{\bfseries #1}}
+\newcommand{\TODO}[1]{\par\red{\bfseries ***TODO: #1***}\\}
+
+
