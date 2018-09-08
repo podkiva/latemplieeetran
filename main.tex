@@ -1,12 +1,25 @@
 %%%%%%%
 %%% IEEE Access, compiled by Ivan Podkurkov in August 2018
 %%%%%%%
-\documentclass[journal,onecolumn]{IEEEtran}
+\documentclass[10pt, conference, compsocconf]{IEEEtran}
 %\documentclass[journal,10pt,draftcls,twoside,onecolumn]{IEEEtran}
 
+% ============ OPTIONS ===========
+\newif\ifRussianlanguage
+\Russianlanguagetrue
+%\Russianlanguagefalse
+
 % =========================== PACKAGES ======================================================
+% Set to true if russian language will be used
+\ifRussianlanguage
+	\fontfamily{cmr}\selectfont
+	\usepackage[utf8]{inputenc}
+	\usepackage[russian]{babel}
+\else
+	\usepackage[latin1]{inputenc}
+	\usepackage[english]{babel}
+\fi
 \usepackage{times}
-\usepackage[english]{babel}
 \usepackage{amsmath, amsfonts, amsthm, bm}
 \usepackage[pdftex]{graphicx}
 \usepackage{epstopdf}
@@ -14,7 +27,6 @@
 \usepackage{gensymb}
 \usepackage{mathtools}
 \usepackage{textpos}
-\usepackage[latin1]{inputenc}
 \usepackage{psfrag}
 \usepackage[caption=false,font=footnotesize]{subfig}
 \usepackage{algorithm}
@@ -69,9 +81,9 @@
 
 \title{ Document title}
 \author{Author Authors,~\IEEEmembership{Student/Member/Fellow,~IEEE}
-	%\ifCLASSOPTIONdraftcls
-	%\footnote{Copyright (c) 2015 IEEE. Personal use of this material is permitted. However, permission to use this material for any other purposes must be obtained from the IEEE by sending a request to pubs-permissions@ieee.org.}
-	%\fi
+\ifCLASSOPTIONdraftcls
+\footnote{Copyright (c) 2015 IEEE. Personal use of this material is permitted. However, permission to use this material for any other purposes must be obtained from the IEEE by sending a request to pubs-permissions ieee.org.}
+\fi
 	\thanks{Some footnote comments go here ...}%
 	\thanks{Another footnote comments go here ...}%
 	\thanks{e.g., Author Authors is/are with the
@@ -87,25 +99,27 @@
 %%% Main document body starts here
 %%%%%%%
 \begin{document}
-
-\maketitle
-
-\begin{IEEEkeywords}
-keywords
-\end{IEEEkeywords}
-
-\IEEEpeerreviewmaketitle
-
-bla bla \cite{DeBoor2001ParctGuideToSplines}
-%%%%%%% 
-%%% Chapter n: ...
-%%%%%%%
-
-%%%%%%%%
-%%% Bibliography, includes a refs.bib BibTeX file
-%%%%%%%%
-\vspace{-5mm}
-\bibliographystyle{IEEEtran}
-\bibliography{IEEEabrv,refs}
-
+	
+	\maketitle
+	
+	\begin{IEEEkeywords}
+	keywords
+	\end{IEEEkeywords}
+	
+	\IEEEpeerreviewmaketitle
+	
+	%русский текст	
+	bla bla \cite{DeBoor2001ParctGuideToSplines}
+	
+	%%%%%%% 
+	%%% Chapter n: ...
+	%%%%%%%
+	
+	%%%%%%%%
+	%%% Bibliography, includes a refs.bib BibTeX file
+	%%%%%%%%
+	\vspace{-5mm}
+	\bibliographystyle{IEEEtran}
+	\bibliography{IEEEabrv,refs}
+	
 \end{document}
